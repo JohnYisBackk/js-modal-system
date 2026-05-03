@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Modal System PRO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+      <div class="grid-overlay"></div>
+
+      <main class="hero-card">
+        <span class="eyebrow">UI Interaction Demo</span>
+
+        <h1>Modal System PRO</h1>
+        <p>
+          A modern popup system with smooth overlay, keyboard support, and clean
+          JavaScript state logic.
+        </p>
+
+        <div class="modal-triggers">
+          <button
+            class="open-modal-btn"
+            data-modal-title="Save changes?"
+            data-modal-text="Your latest changes will be saved to the project."
+            data-action="save"
+          >
+            Save
+          </button>
+
+          <button
+            class="open-modal-btn"
+            data-modal-title="Delete item?"
+            data-modal-text="This action cannot be undone. Please confirm before deleting."
+            data-action="delete"
+          >
+            Delete
+          </button>
+
+          <button
+            class="open-modal-btn"
+            data-modal-title="Upgrade workflow"
+            data-modal-text="Unlock extra features and improve your project workflow."
+            data-action="upgrade"
+          >
+            Upgrade
+          </button>
+        </div>
+      </main>
+
+      <div class="overlay" id="overlay"></div>
+
+      <div class="toast" id="toast">
+        <span class="toast-message"></span>
+        <span class="toast-progress"></span>
+      </div>
+
+      <section class="modal" id="modal">
+        <button class="close-modal-btn" id="closeModalBtn">×</button>
+
+        <span class="modal-badge">Premium Dialog</span>
+
+        <h2 id="modalTitle">Upgrade your workflow</h2>
+        <p id="modalText">This modal is controlled with vanilla JavaScript.</p>
+
+        <div class="modal-actions">
+          <button class="primary-btn">Confirm</button>
+          <button class="secondary-btn" id="cancelModalBtn">Cancel</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
